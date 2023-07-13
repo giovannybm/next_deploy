@@ -4,7 +4,9 @@ import dynamic from "next/dynamic";
 import { configTenant } from "@/config";
 import { handleConfigTenant } from "@/utils";
 import MuiProvider from "../Providers/MuiProvider";
+import { configPWA } from "@/config";
 import { GenerateMetadataProps, RootLayoutProps } from "@/interfaces";
+
 const SupporButton = dynamic(() => import('../components/UI/SupportButton'), {
   ssr: false
  })
@@ -23,6 +25,7 @@ export async function generateMetadata({
   return {
     title: title || "Admin Console",
     description: description,
+    manifest: configPWA(params.tenant),
     icons: [
       {
         rel: "icon",

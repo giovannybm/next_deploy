@@ -10,6 +10,11 @@ export const configTenant: any = {
       'twitter': '',
       'youtube': '',
       'linkedin': ''
+    },
+    PWA:{
+      name:"Novopayment App PWA",
+      short_name:"NovoPWA",
+      description:"App for novopayment"
     }
   },
   "bdb": {
