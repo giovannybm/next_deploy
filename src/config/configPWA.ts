@@ -23,7 +23,7 @@ export function configPWA(tenant: string) {
   let jsonse = JSON.stringify(manifestParams);
   var blob = new Blob([jsonse], { type: "application/json" }); // pass a useful mime
   var url = URL.createObjectURL(blob);
-
+  console.log("Info", "Generate Log")
   return url;
 }
 
