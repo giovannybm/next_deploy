@@ -3,7 +3,7 @@ import { configTenant } from "./configTenant";
 
 const fileIcons = [48, 72, 96, 144, 192, 512];
 
-export function configPWA(tenant: string) {
+export function generateConfigPWA(tenant: string) {
   const { ...PWA } = handleConfigTenant(tenant);
 
   const manifestParams = {
@@ -20,11 +20,9 @@ export function configPWA(tenant: string) {
     })),
   };
 
-  let jsonse = JSON.stringify(manifestParams);
-  var blob = new Blob([jsonse], { type: "application/json" }); // pass a useful mime
-  var url = URL.createObjectURL(blob);
-  console.log("Info", "Generate Log")
-  return url;
+  let manifest = JSON.stringify(manifestParams);
+
+  return manifest;
 }
 
 function getImages(tenant: string, file: string) {
