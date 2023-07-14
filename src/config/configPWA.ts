@@ -30,10 +30,10 @@ function getImages(tenant: string, file: string) {
 
   try {
     require(`%/images/${tenant}/appIcons/${file}`);
-    validateImage = `${process.env.NEXT_PUBLIC_PATH_URL}/images/${tenant}/appIcons/${file}`;
+    validateImage = `/images/${tenant}/appIcons/${file}`;
   } catch (e) {
     require(`%/images/novo/appIcons/${file}`);
-    validateImage = `${process.env.NEXT_PUBLIC_PATH_URL}/images/novo/appIcons/${file}`;
+    validateImage = `/images/novo/appIcons/${file}`;
   }
   return validateImage;
 }
