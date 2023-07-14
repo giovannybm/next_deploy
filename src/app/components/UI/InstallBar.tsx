@@ -19,7 +19,7 @@ export default function InstallBar() {
       position="fixed"
       color={"primary"}
       sx={{ top: "auto", bottom: 0 }}
-      className="installAppButton"
+ 
     >
       <Toolbar>
         <Button variant="contained" onClick={intallPrompt}>
