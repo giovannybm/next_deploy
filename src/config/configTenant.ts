@@ -26,6 +26,11 @@ export const configTenant: any = {
       'facebook': '',
       'instagram': '',
       'twitter': '',
+    },
+    PWA:{
+      name:"Banco de Bogotá App",
+      short_name:"NovoPWA",
+      description:"App for novopayment"
     }
   },
   "coop": {
