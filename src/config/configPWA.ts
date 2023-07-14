@@ -12,7 +12,7 @@ export function generateConfigPWA(tenant: string) {
     description: PWA.description || configTenant["novo"].PWA?.description,
     theme_color: "#11B719",
     display: "standalone",
-    start_url: `${process.env.NEXT_PUBLIC_PATH_URL}/${tenant}/signin`,
+    start_url: `/${tenant}/signin`,
     icons: fileIcons.map((icon: any) => ({
       src: getImages(tenant, `${icon}.png`),
       sizes: `${icon}x${icon}`,
