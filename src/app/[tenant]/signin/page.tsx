@@ -5,7 +5,7 @@ import { Button, Box, Typography, Grid } from "@mui/material";
 //Internal App
 import { useLangStore } from "@/store/langStore";
 import { useTranslation } from "@/app/i18n/client";
-import { Buttons, NavBar } from "@/app/components/UI";
+import { Buttons, NavBar, InstallBar } from "@/app/components/UI";
 
 export default function Signin({ params }: any) {
   const router = useRouter();
@@ -51,6 +51,7 @@ export default function Signin({ params }: any) {
           </Grid>
         </Grid>
       </Box>
+      <InstallBar className="installAppButton" />
     </>
   );
 }

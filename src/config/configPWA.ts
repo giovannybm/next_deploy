@@ -1,3 +1,4 @@
+
 import { handleConfigTenant } from "@/utils";
 import { configTenant } from "./configTenant";
 
