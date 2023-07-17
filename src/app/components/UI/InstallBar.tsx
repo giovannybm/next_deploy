@@ -43,7 +43,7 @@ export default function InstallBar<Props>({ className }: InstallBarProps) {
     setTrigger(!trigger);
   };
 
-  if (true) {
+  if (mobile) {
     return (
       <Slide appear={false} direction="up" in={!trigger} className={className}>
         <AppBar
