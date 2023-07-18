@@ -8,7 +8,7 @@ const nextConfig = {
     if (!options.isServer) {
       console.log("********")
       const SWConfig = new WorkboxPlugin.InjectManifest({
-        swSrc: "./src/config/service-worker/index.ts",
+        swSrc: "./src/config/service-worker/index.js",
         swDest: "../public/service-worker.js",
         // In dev, exclude everything.
         // This avoids irrelevant warnings about chunks being too large for caching.
