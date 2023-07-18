@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
+import Script from 'next/script'
 //Internal App
 import { configTenant } from "@/config";
 import { handleConfigTenant } from "@/utils";
@@ -44,9 +45,12 @@ export default async function SigninLayout({
   params,
 }: RootLayoutProps) {
   return (
+
+
     <MuiProvider theme={params.tenant}>
       {children}
       <SupporButton tenant={params.tenant} /> 
     </MuiProvider>
+
   );
 }
