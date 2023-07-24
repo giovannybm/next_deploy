@@ -15,6 +15,28 @@ export const configTenant: any = {
       name: "Novopayment App PWA",
       short_name: "NovoPWA",
       description: "App for novopayment",
+      theme_color: "#0A60F9",
+      background_color: "#F3F3F3",
+      screenshots: [
+        {
+          src: "/images/novo/app_screenshots/s1.jfif",
+          size: "1000x600",
+          type: `image/jpg`,
+          purpose: "any",
+        },
+        {
+          src: "/images/novo/app_screenshots/s2.jfif",
+          size: "1000x600",
+          type: `image/jpg`,
+          purpose: "any",
+        },
+        {
+          src: "/images/novo/app_screenshots/s3.jfif",
+          size: "1000x600",
+          type: `image/jpg`,
+          purpose: "any",
+        },
+      ],
     },
   },
   bdb: {
@@ -31,6 +53,33 @@ export const configTenant: any = {
       name: "Banco de Bogotá App",
       short_name: "bogot APP",
       description: "App Banco de Bogotá",
+      theme_color: "#023669",
+      background_color: "#BFCBCB", 
+      screenshots: [
+        {
+          src: "/images/novo/app_screenshots/sc1.jfif",
+          size: "600x1000",
+          type: `image/jpg`,
+          purpose: "any",
+        },
+        {
+          src: "/images/novo/app_screenshots/sc2.jfif",
+          size: "600x1000",
+          type: `image/jpg`,
+          purpose: "any",
+        },
+        {
+          src: "/images/novo/app_screenshots/sc3.jfif",
+          size: "600x1000",
+          type: `image/jpg`,
+          purpose: "any",
+        },        {
+          src: "/images/novo/app_screenshots/sc4.jfif",
+          size: "600x1000",
+          type: `image/jpg`,
+          purpose: "any",
+        },
+      ],
     },
   },
   coop: {
