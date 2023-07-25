@@ -19,19 +19,19 @@ export const configTenant: any = {
       background_color: "#F3F3F3",
       screenshots: [
         {
-          src: "/images/novo/app_screenshots/s1.jfif",
+          src: "/images/novo/app_screenshots/s1.jpg",
           size: "1000x600",
           type: `image/jpg`,
           purpose: "any",
         },
         {
-          src: "/images/novo/app_screenshots/s2.jfif",
+          src: "/images/novo/app_screenshots/s2.jpg",
           size: "1000x600",
           type: `image/jpg`,
           purpose: "any",
         },
         {
-          src: "/images/novo/app_screenshots/s3.jfif",
+          src: "/images/novo/app_screenshots/s3.jpg",
           size: "1000x600",
           type: `image/jpg`,
           purpose: "any",
@@ -57,24 +57,24 @@ export const configTenant: any = {
       background_color: "#BFCBCB", 
       screenshots: [
         {
-          src: "/images/novo/app_screenshots/sc1.jfif",
+          src: "/images/novo/app_screenshots/sc1.jpg",
           size: "600x1000",
           type: `image/jpg`,
           purpose: "any",
         },
         {
-          src: "/images/novo/app_screenshots/sc2.jfif",
+          src: "/images/novo/app_screenshots/sc2.jpg",
           size: "600x1000",
           type: `image/jpg`,
           purpose: "any",
         },
         {
-          src: "/images/novo/app_screenshots/sc3.jfif",
+          src: "/images/novo/app_screenshots/sc3.jpg",
           size: "600x1000",
           type: `image/jpg`,
           purpose: "any",
         },        {
-          src: "/images/novo/app_screenshots/sc4.jfif",
+          src: "/images/novo/app_screenshots/sc4.jpg",
           size: "600x1000",
           type: `image/jpg`,
           purpose: "any",

@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { isMobileOnly } from "react-device-detect";
+import { isDesktop } from "react-device-detect";
 
 import { AppBar, Toolbar, Button, Slide, Box, IconButton } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
@@ -11,10 +11,10 @@ export default function InstallBar<Props>({ className }: InstallBarProps) {
 
   const [trigger, setTrigger] = useState(false);
 
-  const [mobile, setMobile] = useState(false);
+  const [desktop, setDesktop] = useState(false);
 
   useEffect(() => {
-    setMobile(isMobileOnly);
+    setDesktop(isDesktop);
 
     window.addEventListener("beforeinstallprompt", (e: Event) => {
       
@@ -43,7 +43,7 @@ export default function InstallBar<Props>({ className }: InstallBarProps) {
     setTrigger(!trigger);
   };
 
-  if (mobile) {
+  if (!false) {
     return (
       <Slide appear={false} direction="up" in={!trigger} className={className}>
         <AppBar

@@ -7,7 +7,7 @@ export function generateConfigPWA(tenant: string) {
   const { PWA } = handleConfigTenant(tenant);
 
   const manifestParams = {
-    name: PWA.title || configTenant["novo"].PWA?.name,
+    name: PWA.name || configTenant["novo"].PWA?.name,
     short_name: PWA.short_name || configTenant["novo"].PWA?.short_name,
     description: PWA.description || configTenant["novo"].PWA?.description,
     theme_color: PWA.theme_color || configTenant["novo"].PWA?.theme_color,

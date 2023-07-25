@@ -1,5 +1,10 @@
-@media all and (display-mode: standalone) {  
+.installAppButton {
+  display: none;
+}
+
+@media all and (display-mode: browser) {  
     .installAppButton {
-      display: none;
+      display: block;
     }
   }
+
