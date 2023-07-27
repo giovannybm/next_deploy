@@ -12,26 +12,26 @@ export const configTenant: any = {
       linkedin: "",
     },
     PWA: {
-      name: "Novopayment App PWA",
+      name: "Novopayment App",
       short_name: "NovoPWA",
       description: "App for novopayment",
       theme_color: "#0A60F9",
       background_color: "#F3F3F3",
       screenshots: [
         {
-          src: "/images/novo/app_screenshots/s1.jpg",
+          src: "/images/novo/pwa_screenshots/s1.jpg",
           size: "1000x600",
           type: `image/jpg`,
           purpose: "any",
         },
         {
-          src: "/images/novo/app_screenshots/s2.jpg",
+          src: "/images/novo/pwa_screenshots/s2.jpg",
           size: "1000x600",
           type: `image/jpg`,
           purpose: "any",
         },
         {
-          src: "/images/novo/app_screenshots/s3.jpg",
+          src: "/images/novo/pwa_screenshots/s3.jpg",
           size: "1000x600",
           type: `image/jpg`,
           purpose: "any",
@@ -57,24 +57,24 @@ export const configTenant: any = {
       background_color: "#BFCBCB", 
       screenshots: [
         {
-          src: "/images/novo/app_screenshots/sc1.jpg",
+          src: "/images/bdb/pwa_screenshots/sc1.jpg",
           size: "600x1000",
           type: `image/jpg`,
           purpose: "any",
         },
         {
-          src: "/images/novo/app_screenshots/sc2.jpg",
+          src: "/images/bdb/pwa_screenshots/sc2.jpg",
           size: "600x1000",
           type: `image/jpg`,
           purpose: "any",
         },
         {
-          src: "/images/novo/app_screenshots/sc3.jpg",
+          src: "/images/bdb/pwa_screenshots/sc3.jpg",
           size: "600x1000",
           type: `image/jpg`,
           purpose: "any",
         },        {
-          src: "/images/novo/app_screenshots/sc4.jpg",
+          src: "/images/bdb/pwa_screenshots/sc4.jpg",
           size: "600x1000",
           type: `image/jpg`,
           purpose: "any",
