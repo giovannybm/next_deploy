@@ -1,2 +1,2 @@
 export * from './configTenant';
-export * from './configPWA'
+export * from './generateManifest'

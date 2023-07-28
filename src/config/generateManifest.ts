@@ -5,7 +5,7 @@ import { getImages } from "@/utils";
 
 const fileIcons = [48, 72, 96, 144, 192, 512];
 
-export function generateConfigPWA(tenant: string) {
+export function generateManifest(tenant: string) {
   const { PWA } = handleConfigTenant(tenant);
 
   const manifestParams = {
@@ -22,11 +22,20 @@ export function generateConfigPWA(tenant: string) {
       sizes: `${icon}x${icon}`,
       type: `image/png`,
     })),
-    screenshots: PWA?.screenshots || configTenant["novo"].PWA?.screenshots,
+    screenshots:
+      PWA?.screenshots.map((e: any) => {
+        let obj: any = Object.assign({}, e);
+        obj["src"] = `/images/${tenant}/pwa_screenshots/${e.src}`;
+        return obj;
+      }) ||
+      configTenant["novo"].PWA?.screenshots.map((e: any) => {
+        let obj: any = Object.assign({}, e);
+        obj["src"] = `/images/novo/pwa_screenshots/${e.src}`;
+        return obj;
+      }),
   };
 
-  let manifest = JSON.stringify(manifestParams);
+  let manifest = JSON.stringify(manifestParams, null, 2);
 
   return manifest;
 }
-

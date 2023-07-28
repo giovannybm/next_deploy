@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
 const WorkboxPlugin = require("workbox-webpack-plugin");
 const nextConfig = {
-  webpack: (
+  /*webpack: (
     config,
     options
   ) => {
     if (!options.isServer) {
-      console.log("********")
+   
       const SWConfig = new WorkboxPlugin.InjectManifest({
         swSrc: "./src/config/service-worker/index.js",
         swDest: "../public/service-worker.js",
@@ -16,7 +16,7 @@ const nextConfig = {
         ...(options.dev ? { exclude: [/./] } : undefined),
       })
       if (options.dev) {
-        console.log("/////////")
+  
         Object.defineProperty(SWConfig, "alreadyCalled", {
           get() {
             return false;
@@ -32,7 +32,7 @@ const nextConfig = {
 
     
     return config;
-  },
+  },*/
 };
 
 module.exports = nextConfig;

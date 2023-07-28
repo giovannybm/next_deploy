@@ -28,7 +28,7 @@ export async function generateMetadata({
   return {
     title: title || "Admin Console",
     description: description,
-    manifest: `manifest`,
+    manifest: `manifest.json`,
     icons: [
       {
         rel: "icon",
