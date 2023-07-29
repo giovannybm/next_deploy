@@ -11,7 +11,7 @@ export default function InstallBar<Props>({ className }: InstallBarProps) {
 
   const [trigger, setTrigger] = useState(false);
 
-  const [desktop, setDesktop] = useState(false);
+  const [desktop, setDesktop] = useState(true);
 
   useEffect(() => {
     setDesktop(isDesktop);
@@ -43,7 +43,7 @@ export default function InstallBar<Props>({ className }: InstallBarProps) {
     setTrigger(!trigger);
   };
 
-  if (!false) {
+  if (!desktop) {
     return (
       <Slide appear={false} direction="up" in={!trigger} className={className}>
         <AppBar

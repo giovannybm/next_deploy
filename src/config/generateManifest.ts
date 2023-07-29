@@ -15,7 +15,6 @@ export function generateManifest(tenant: string) {
     theme_color: PWA?.theme_color || configTenant["novo"].PWA?.theme_color,
     background_color:
       PWA?.background_color || configTenant["novo"].PWA?.background_color,
-    display: "standalone",
     start_url: `/${tenant}/signin`,
     icons: fileIcons.map((icon: any) => ({
       src: getImages(tenant, `pwa_icons/${icon}.png`).default.src,
@@ -33,6 +32,9 @@ export function generateManifest(tenant: string) {
         obj["src"] = `/images/novo/pwa_screenshots/${e.src}`;
         return obj;
       }),
+    display: "standalone",
+    orientation:"portrait",
+    
   };
 
   let manifest = JSON.stringify(manifestParams, null, 2);

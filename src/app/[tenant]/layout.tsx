@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
-import Script from 'next/script'
+
 //Internal App
 import { configTenant } from "@/config";
 import { handleConfigTenant } from "@/utils";
@@ -37,6 +37,11 @@ export async function generateMetadata({
         url: urlFavicon,
       },
     ],
+    appleWebApp: {
+      title: title || "Admin Console",
+      statusBarStyle: "default",
+      capable:true
+    },
   };
 }
 
@@ -45,12 +50,9 @@ export default async function SigninLayout({
   params,
 }: RootLayoutProps) {
   return (
-
-
     <MuiProvider theme={params.tenant}>
       {children}
-      <SupporButton tenant={params.tenant} /> 
+      <SupporButton tenant={params.tenant} />
     </MuiProvider>
-
   );
 }
