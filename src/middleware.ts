@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const validTenants = ["novo", "bdb", "coop"];
+const validTenants = ["azul", "amarillo", "rojo"];
 const tenantCookie = "tenant";
 const SIGNIN_ROUTE = "/signin";
 const DASHBOARD_ROUTE = "/dashboard";
@@ -9,7 +9,7 @@ const INICIO_ROUTE = "/inicio";
 export async function middleware(request: NextRequest) {
   const url = request.nextUrl.clone();
   const tenant = url.pathname.split("/")[1];
-  const defaultTenant = request.cookies.get(tenantCookie)?.value || "novo";
+  const defaultTenant = request.cookies.get(tenantCookie)?.value || "azul";
   const token = request.cookies.get("token")?.value || false;
 
   console.log("middleware en url pathname:", url.pathname);

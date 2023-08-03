@@ -4,7 +4,7 @@ export function getImages(tenant: string, file: string) {
   try {
     validateImage = require(`%/images/${tenant}/${file}`);
   } catch (e) {
-    validateImage = require(`%/images/novo/${file}`);
+    validateImage = require(`%/images/azul/${file}`);
   }
 
   return validateImage;

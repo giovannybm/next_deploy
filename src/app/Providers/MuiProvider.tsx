@@ -11,7 +11,7 @@ export default function MuiProvider({ children, theme }: MuiProviderProps) {
   try {
     theTheme = require(`../../themes/theme-${theme}`);
   } catch (error) {
-    theTheme = require(`../../themes/theme-novo`);
+    theTheme = require(`../../themes/theme-azul`);
   }
 
   return (

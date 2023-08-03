@@ -18,7 +18,7 @@ export async function generateMetadata({
   params,
 }: GenerateMetadataProps): Promise<Metadata> {
   const { title, description, favicon } = handleConfigTenant(params.tenant);
-  const faviconDefault = handleConfigTenant("novo");
+  const faviconDefault = handleConfigTenant("azul");
 
   const urlFavicon =
     params.tenant in configTenant && favicon !== ""

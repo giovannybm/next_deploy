@@ -1,8 +1,8 @@
 export const configTenant: any = {
-  novo: {
-    title: "Empresas Novopayment",
-    description: "Descripción Novo",
-    favicon: `${process.env.NEXT_PUBLIC_PATH_URL}/images/novo/favicon.ico`,
+  azul: {
+    title: "Empresas Azul",
+    description: "Descripción Azul",
+    favicon: `${process.env.NEXT_PUBLIC_PATH_URL}/images/Azul/favicon.ico`,
     imagesFooter: ["novopayment", "pci"],
     networks: {
       facebook: "",
@@ -12,9 +12,9 @@ export const configTenant: any = {
       linkedin: "",
     },
     PWA: {
-      name: "Novopayment App",
-      short_name: "NovoPWA",
-      description: "App for novopayment",
+      name: "Azul App",
+      short_name: "AzulPWA",
+      description: "App for Azul management",
       theme_color: "#0A60F9",
       background_color: "#F3F3F3",
       screenshots: [
@@ -39,10 +39,10 @@ export const configTenant: any = {
       ],
     },
   },
-  bdb: {
-    title: "Empresas Banco de Bogotá",
-    description: "Descripción BDB",
-    favicon: `${process.env.NEXT_PUBLIC_PATH_URL}/images/bdb/favicon.ico`,
+  amarillo: {
+    title: "Empresas Amarillo",
+    description: "Descripción Amarillo",
+    favicon: `${process.env.NEXT_PUBLIC_PATH_URL}/images/amarillo/favicon.ico`,
     imagesFooter: ["img-logo-color"],
     networks: {
       facebook: "",
@@ -50,42 +50,36 @@ export const configTenant: any = {
       twitter: "",
     },
     PWA: {
-      name: "Banco de Bogotá App",
-      short_name: "bogot APP",
-      description: "App Banco de Bogotá",
+      name: "Amarillo App",
+      short_name: "AMAPP",
+      description: "Amarillo App de Administración",
       theme_color: "#023669",
       background_color: "#BFCBCB",
       screenshots: [
         {
-          src: "sc1.jpg",
+          src: "sc1.png",
           sizes: "600x1000",
-          type: `image/jpg`,
+          type: `image/png`,
           purpose: "any",
         },
         {
-          src: "sc2.jpg",
+          src: "sc2.png",
           sizes: "600x1000",
-          type: `image/jpg`,
+          type: `image/png`,
           purpose: "any",
         },
         {
-          src: "sc3.jpg",
+          src: "sc3.png",
           sizes: "600x1000",
-          type: `image/jpg`,
+          type: `image/png`,
           purpose: "any",
-        },
-        {
-          src: "sc4.jpg",
-          sizes: "600x1000",
-          type: `image/jpg`,
-          purpose: "any",
-        },
+        }
       ],
     },
   },
-  coop: {
-    title: "Empresas Coopcentral",
-    description: "Descripción Coop",
+  rojo: {
+    title: "Empresas Rojo",
+    description: "Descripción Rojo",
     favicon: "",
     imagesFooter: ["img-logo-color", "pci"],
     networks: "",

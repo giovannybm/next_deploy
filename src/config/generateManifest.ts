@@ -9,12 +9,12 @@ export function generateManifest(tenant: string) {
   const { PWA } = handleConfigTenant(tenant);
 
   const manifestParams = {
-    name: PWA?.name || configTenant["novo"].PWA?.name,
-    short_name: PWA?.short_name || configTenant["novo"].PWA?.short_name,
-    description: PWA?.description || configTenant["novo"].PWA?.description,
-    theme_color: PWA?.theme_color || configTenant["novo"].PWA?.theme_color,
+    name: PWA?.name || configTenant["azul"].PWA?.name,
+    short_name: PWA?.short_name || configTenant["azul"].PWA?.short_name,
+    description: PWA?.description || configTenant["azul"].PWA?.description,
+    theme_color: PWA?.theme_color || configTenant["azul"].PWA?.theme_color,
     background_color:
-      PWA?.background_color || configTenant["novo"].PWA?.background_color,
+      PWA?.background_color || configTenant["azul"].PWA?.background_color,
     start_url: `/${tenant}/signin`,
     icons: fileIcons.map((icon: any) => ({
       src: getImages(tenant, `pwa_icons/${icon}.png`).default.src,
@@ -27,9 +27,9 @@ export function generateManifest(tenant: string) {
         obj["src"] = `/images/${tenant}/pwa_screenshots/${e.src}`;
         return obj;
       }) ||
-      configTenant["novo"].PWA?.screenshots.map((e: any) => {
+      configTenant["azul"].PWA?.screenshots.map((e: any) => {
         let obj: any = Object.assign({}, e);
-        obj["src"] = `/images/novo/pwa_screenshots/${e.src}`;
+        obj["src"] = `/images/azul/pwa_screenshots/${e.src}`;
         return obj;
       }),
     display: "standalone",
