@@ -17,6 +17,7 @@ import {
 	InputRadio,
 	InputCheck,
 	Modals,
+	InstallBar,
 } from '@/components/UI';
 import { useState } from 'react';
 
@@ -189,6 +190,7 @@ export default function Signin({ params }: any) {
 					{t('buttons.accept')}
 				</Button>
 			</Modals>
+			<InstallBar className="installAppButton" />
 		</>
 	);
 }

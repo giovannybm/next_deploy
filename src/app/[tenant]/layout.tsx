@@ -8,50 +8,58 @@ import MuiProvider from '../Providers/MuiProvider';
 import { GenerateMetadataProps, RootLayoutProps } from '@/interfaces';
 import { Container, Box } from '@mui/material';
 const Widget = dynamic(() => import('@/components/UI/SupportButton'), {
-  ssr: false,
+	ssr: false,
 });
 
-export async function generateMetadata({ params }: GenerateMetadataProps): Promise<Metadata> {
-  const { title, description, favicon } = handleConfigTenant(params.tenant);
-  const faviconDefault = handleConfigTenant('novo');
+export async function generateMetadata({
+	params,
+}: GenerateMetadataProps): Promise<Metadata> {
+	const { title, description, favicon } = handleConfigTenant(params.tenant);
+	const faviconDefault = handleConfigTenant('azul');
 
-  const urlFavicon = params.tenant in configTenant && favicon !== '' ? favicon : faviconDefault?.favicon;
+	const urlFavicon =
+		params.tenant in configTenant && favicon !== ''
+			? favicon
+			: faviconDefault?.favicon;
 
-  return {
-    title: title || 'Admin Console',
-    description: description,
-    manifest: `manifest.json`,
-    icons: [
-      {
-        rel: 'icon',
-        type: 'image/x-icon',
-        sizes: '32x32',
-        url: urlFavicon,
-      },
-    ],
-    appleWebApp: {
-      title: title || "Admin Console",
-      statusBarStyle: "default",
-      capable:true
-    },
-  };
+	return {
+		title: title || 'Admin Console',
+		description: description,
+		manifest: `manifest.json`,
+		icons: [
+			{
+				rel: 'icon',
+				type: 'image/x-icon',
+				sizes: '32x32',
+				url: urlFavicon,
+			},
+		],
+		appleWebApp: {
+			title: title || 'Admin Console',
+			statusBarStyle: 'default',
+			capable: true,
+		},
+	};
 }
 
-export default async function SigninLayout({ children, params }: RootLayoutProps) {
-  return (
-    <MuiProvider theme={params.tenant}>
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          flexWrap: 'nowrap',
-          height: '100vh',
-        }}
-      >
-        <Container>{children}</Container>
-        <Footer tenant={params.tenant} />
-        <Widget tenant={params.tenant} />
-      </Box>
-    </MuiProvider>
-  );
+export default async function SigninLayout({
+	children,
+	params,
+}: RootLayoutProps) {
+	return (
+		<MuiProvider theme={params.tenant}>
+			<Box
+				sx={{
+					display: 'flex',
+					flexDirection: 'column',
+					flexWrap: 'nowrap',
+					height: '100vh',
+				}}
+			>
+				<Container>{children}</Container>
+				<Footer tenant={params.tenant} />
+				<Widget tenant={params.tenant} />
+			</Box>
+		</MuiProvider>
+	);
 }

@@ -1,5 +1,6 @@
 export { default as NavBar } from './NavBar';
 export { default as Footer } from './Footer';
+export { default as InstallBar } from './InstallBar';
 export { default as SupportButton } from './SupportButton';
 export { default as InputPass } from './form/InputPass';
 export { default as InputText } from './form/InputText';
